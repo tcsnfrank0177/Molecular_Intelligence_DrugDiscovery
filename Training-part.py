@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-"""Sample training code, SchNet architecture is adopted, alchemy is needed, layers tech is also needed
+"""SchNetModel is included, layers tech is needed
 """
 import numpy as np
 import pandas as pd
@@ -12,11 +12,6 @@ from Alchemy_dataset import TencentAlchemyDataset, batcher
 import torch.nn.functional as F
 
 
-def print_res(label, res, op):
-    size = len(res)
-    for i in range(size):
-        line = "%s,%s\n" % (label[i], res[i])
-        op.writelines(line)
 
 
 def binary_acc(y_pred, y_test):
@@ -34,17 +29,6 @@ def binary_acc(y_pred, y_test):
 
     return acc
 
-
-def loss_sq(y_pred, y_test):
-    diff = y_pred-y_test
-    diff_sq = diff**2
-    loss = diff_sq.sum()
-
-    # acc = acc/tot
-    # # acc = th.round(acc * 100)
-    return loss
-
-
 def predict(res):
 
     ans = []
@@ -55,6 +39,23 @@ def predict(res):
         else:
             ans.append(1)
         return th.tensor(ans)
+
+def loss_sq(y_pred, y_test):
+    diff = y_pred-y_test
+    diff_sq = diff**2
+    loss = diff_sq.sum()
+
+    # acc = acc/tot
+    # # acc = th.round(acc * 100)
+    return loss
+
+def print_res(label, res, op):
+    size = len(res)
+    for i in range(size):
+        line = "%s,%s\n" % (label[i], res[i])
+        op.writelines(line)
+
+
 
 
 def train(model="sch", epochs= 'number for definition' , device=th.device("cpu"), dataset='', save='./'):
@@ -75,18 +76,19 @@ def train(model="sch", epochs= 'number for definition' , device=th.device("cpu")
     test_dataset.file_path =  'file_target' 
     test_dataset._load()
 
-    alchemy_loader = DataLoader(
-        dataset=alchemy_dataset,
-        batch_size= 'number for definition' ,
-        collate_fn=batcher(),
-        shuffle=True,
-        num_workers=0,
-    )
+   
     test_loader = DataLoader(
         dataset=test_dataset,
         batch_size= 'number for definition' ,
         collate_fn=batcher(),
         shuffle=False,
+        num_workers=0,
+    )
+     alchemy_loader = DataLoader(
+        dataset=alchemy_dataset,
+        batch_size= 'number for definition' ,
+        collate_fn=batcher(),
+        shuffle=True,
         num_workers=0,
     )
 
@@ -171,6 +173,4 @@ def train(model="sch", epochs= 'number for definition' , device=th.device("cpu")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-   "model selection first"
-   "parameters control"
-    "added functions"
+   
