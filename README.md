@@ -1,4 +1,4 @@
-# Molecular_Intelligence_DrugDiscovery
+# Molecular_Intelligence_DrugDiscovery (Anisosome)
 
 The technical details can be found in uploaded files. The measurement details of the uploaded experimental data sets are confidential.  Graph-based model is powerful for molecular structure information extracting; however, its weakness lies in the fact that it cannot summarize the overall molecule information; machine learning based methods can overcome this, thus we remmond to apply GCN method for initial screening, and then use ML methods for second screeing (optional), to reach molecular-intelligence discovery and save experimental cost.
 
