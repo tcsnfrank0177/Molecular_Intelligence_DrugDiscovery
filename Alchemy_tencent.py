@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
-"""Example dataloader of Tencent Alchemy Dataset
-https://alchemy.tencent.com/
+"""Tencent Alchemy Dataset:
+https://alchemy.tencent.com/ for chemical structure stdies
 """
 import os
 import zipfile
@@ -21,11 +21,6 @@ import numpy as np
 _urls = {'Alchemy': 'https://alchemy.tencent.com/data/'}
 
 
-class AlchemyBatcher:
-    def __init__(self, graph=None, label=None):
-        self.graph = graph
-        self.label = label
-
 
 def batcher():
     def batcher_dev(batch):
@@ -35,6 +30,13 @@ def batcher():
         return AlchemyBatcher(graph=batch_graphs, label=labels)
 
     return batcher_dev
+
+class AlchemyBatcher:
+    def __init__(self, graph=None, label=None):
+        self.graph = graph
+        self.label = label
+
+
 
 
 class TencentAlchemyDataset(Dataset):
