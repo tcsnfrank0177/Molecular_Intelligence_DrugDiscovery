@@ -16,4 +16,4 @@ Reference:
 
 4. Chen, G.; Chen, P.; Hsieh, C.-Y.; Lee, C.-K.; Liao, B.; Liao, R.; Liu, W.; Qiu, J.; Sun, Q.; Tang, J.; Zemel, R.; Zhang, S. Alchemy: A Quantum Chemistry Dataset for Benchmarking AI Models. arXiv preprint arXiv:1906.09427 2019.
 
-5. P Gao, M Xu, Q Zhang, CZ Chen, H Guo, Y Ye, W Zheng, M Shen. Graph Convolutional Network-Based Screening Strategy for Rapid Identification of SARS-CoV-2 Cell-Entry Inhibitors. Journal of Chemical Information and Modeling 2022 62 (8), 1988-1997
+5. Gao, P.; Xu, M.; Zhang, Q.; Chen, CZ.; Guo, H.; Ye, Y.; Zheng, W.; Shen, M. Graph Convolutional Network-Based Screening Strategy for Rapid Identification of SARS-CoV-2 Cell-Entry Inhibitors. Journal of Chemical Information and Modeling 2022 62 (8), 1988-1997
