@@ -1,6 +1,7 @@
 # Molecular_Intelligence_DrugDiscovery (Anisosome)
 
-The technical details can be found in uploaded files. The measurement details of the uploaded experimental data sets are confidential.  Graph-based model is powerful for molecular structure information extracting; however, its weakness lies in the fact that it cannot summarize the overall molecule information; machine learning based methods can overcome this, thus we remmond to apply GCN method for initial screening, and then use ML methods (SVC, Randomforest, and etc.) for second screeing (optional), to reach molecular-intelligence discovery and save experimental cost.
+The technical details can be found in uploaded files. The measurement details of the uploaded experimental data sets are confidential. The collected active compounds by experiment is applied as training set for virtual screening; and the clustering result of these active compounds is presented in Figure S1 for diversity demonstration. Graph-based model is more powerful for molecular structure information extracting over machine learning methods, especially upon excluding inactive compounds; the benchmarking result is provided in Table S1 for reference. 
+However, its weakness lies in the fact that it cannot summarize the overall molecule information; machine learning based methods can overcome this, thus we remmond to apply GCN method for initial screening, and then use ML methods (SVC, Randomforest, and etc.) for second screeing (optional), to reach molecular-intelligence discovery and save experimental cost.
 
 Due to the biased distribution of the original data set (Anisosome), we recommend sub-sampling method for models benchmark.
 
